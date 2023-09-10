@@ -25,6 +25,20 @@ public class StudentMarksAnalyzer {
         for (int i = 0; i < 30; i++) {
             System.out.println("Student " + (i + 1) + " Mark: " + marks[i]);
         }
+        
+        // F5: Print Highest and Lowest Marks
+        int maxMark = marks[0];
+        int minMark = marks[0];
+        for (int i = 1; i < 30; i++) {
+            if (marks[i] > maxMark) {
+                maxMark = marks[i];
+            }
+            if (marks[i] < minMark) {
+                minMark = marks[i];
+            }
+        }
+        System.out.println("Highest Mark: " + maxMark);
+        System.out.println("Lowest Mark: " + minMark);
         scanner.close();
     }
 
