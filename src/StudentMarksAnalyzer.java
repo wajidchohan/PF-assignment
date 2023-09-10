@@ -39,6 +39,25 @@ public class StudentMarksAnalyzer {
         }
         System.out.println("Highest Mark: " + maxMark);
         System.out.println("Lowest Mark: " + minMark);
+        
+     // F6: Calculate Mean and Standard Deviation
+        int sum = 0;
+        for (int mark : marks) {
+            sum += mark;
+        }
+        double mean = (double) sum / 30;
+
+        double squaredDiffSum = 0;
+        for (int mark : marks) {
+            squaredDiffSum += Math.pow((mark - mean), 2);
+        }
+        double variance = squaredDiffSum / 30;
+        double standardDeviation = Math.sqrt(variance);
+
+        System.out.println("Mean: " + mean);
+        System.out.println("Standard Deviation: " + standardDeviation);
+
+
         scanner.close();
     }
 
